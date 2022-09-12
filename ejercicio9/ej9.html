@@ -23,12 +23,17 @@
       var myCat = document.getElementById("myCat");
 
       function catWalk(){
-        myCat.style.left=parseFloat(myCat.style.left)+10+"px"
-      };
-      
-      setInterval(catWalk,50)
+        myCat.style.left = parseInt(myCat.style.left)+10+"px";
 
-      
+        const distanceWalked = parseInt(myCat.style.left);
+        const windowWidth = window.innerWidth;
+
+        if (distanceWalked > windowWidth) {
+        myCat.style.left = "0px";
+        }
+      }
+    
+      window.setInterval(catWalk,50)  
 
     </script>
     <a href="../index.html"><button type="button" class="btn btn-primary btn-lg" style="position: relative">Atrás</button></a>
