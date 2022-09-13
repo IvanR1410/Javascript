@@ -18,13 +18,13 @@
     <div class="container">
       <h1>Votaciones</h1>
       <!-- *** -->
-      <div class="container">
-        <button type="button" onclick="vote(1)">Socialistas</button>
-        <button type="button" onclick="vote(1)">Liberales</button>
-        <button type="button" onclick="vote(1)">Animalistas</button>
-        <button type="button" onclick="vote(1)">Centristas</button>
-        <button type="button" onclick="vote(1)">Ecologistas</button>
-        <button type="button" onclick="reset()">Reset</button>
+      <div class="btn-group" role="group">
+        <button type="button" onclick="vote(1)" class="btn btn-outline-primary">Socialistas</button>
+        <button type="button" onclick="vote(2)" class="btn btn-outline-primary">Liberales</button>
+        <button type="button" onclick="vote(3)" class="btn btn-outline-primary">Animalistas</button>
+        <button type="button" onclick="vote(4)" class="btn btn-outline-primary">Centristas</button>
+        <button type="button" onclick="vote(5)" class="btn btn-outline-primary">Ecologistas</button>
+        <button type="button" onclick="reset()" class="btn btn-outline-primary">Reset</button>
       </div>
       <!-- *** -->
       <div>
@@ -66,6 +66,7 @@
             config
           );
         </script>
+
         </canvas>
       </div>
     </div>
