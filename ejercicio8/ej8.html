@@ -19,16 +19,56 @@
       <h1>Votaciones</h1>
       <!-- *** -->
       <div class="container">
-        <button type="button" onclick="vote(0)">Socialistas</button>
+        <button type="button" onclick="vote(1)">Socialistas</button>
         <button type="button" onclick="vote(1)">Liberales</button>
-        <button type="button" onclick="vote(2)">Animalistas</button>
-        <button type="button" onclick="vote(3)">Centristas</button>
-        <button type="button" onclick="vote(4)">Ecologistas</button>
+        <button type="button" onclick="vote(1)">Animalistas</button>
+        <button type="button" onclick="vote(1)">Centristas</button>
+        <button type="button" onclick="vote(1)">Ecologistas</button>
         <button type="button" onclick="reset()">Reset</button>
       </div>
       <!-- *** -->
-      <div>Vuestro gráfico</div>
+      <div>
+        <canvas id="myChart">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+               
+           const data = {
+            labels: [
+            'Socialistas',
+            'Liberales',
+            'Animalistas',
+            'Centristas',
+            'Ecologistas',
+            ],
+            datasets: [{
+              label: 'My First Dataset',
+              data: [300, 50, 100, 50, 200],
+              backgroundColor: [
+                '#036894',
+                '#2BB2A9',
+                '#C0EDD2',
+                '#A4DEB4',
+                '#56B89E'
+              ],
+              hoverOffset: 4
+            }]
+          };
+        
+          const config = {
+            type: 'pie',
+            data: data,
+            options: {}
+          };
+        </script>
+        <script>
+          const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+          );
+        </script>
+        </canvas>
+      </div>
     </div>
-    <a href="../index.html"><button type="button" class="btn btn-primary btn-lg">Atrás</button></a>
+    <a href="../index.html"><button type="button" style="position: absolute; top: 1rem; left: 1rem;" class="btn btn-primary btn-lg">Atrás</button></a>
   </body>
 </html>
